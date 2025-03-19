@@ -1,10 +1,8 @@
-version: '3.8'
-
 services:
   client:
     build:
-      context: ./client
-      dockerfile: ./client/Dockerfile
+      context: ./Client
+      dockerfile: Dockerfile
     ports:
       - "80:80"
     depends_on:
@@ -13,8 +11,8 @@ services:
 
   server:
     build:
-      context: ./server
-      dockerfile: ./server/Dockerfile
+      context: ./Server
+      dockerfile: Dockerfile
     environment:
       - NODE_ENV=development
       - DB_HOST=db
