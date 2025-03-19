@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  client:
+    build: ./client
+    container_name: client
+    restart: always
+    ports:
+      - "8080:80"
+    command: nginx -g "daemon off;"
+    depends_on:
+      - server
+
+  server:
+    build: ./server
+    container_name: API
+    restart: always
+    ports: 
+      - "3005:3005"
+    command: npm run start
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    container_name: database
+    restart: always
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
