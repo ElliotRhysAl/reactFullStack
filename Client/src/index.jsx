@@ -1,9 +1,10 @@
+/*Libraries & Frameworks*/
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
+
+/*Pages & Components*/
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/Footer";
@@ -23,6 +24,5 @@ root.render(
             </div>
             <Footer />
         </BrowserRouter>
-        
     </>
 );

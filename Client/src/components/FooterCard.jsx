@@ -1,7 +1,8 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const CardComp = ({title, desc, url, img}) => {
+
+const FooterCard = ({title, desc, url, img}) => {
     return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={img} />
@@ -16,4 +17,4 @@ const CardComp = ({title, desc, url, img}) => {
   );
 };
 
-export default CardComp;
+export default FooterCard;

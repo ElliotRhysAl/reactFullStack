@@ -24,7 +24,7 @@ const Home = () => {
             <Form.Control type="surname" placeholder="Smith" />
             <Form.Text>Please input yor Surname</Form.Text>
           </Form.Group>
-          </Col>          
+          </Col> 
         </Row>
       </Form>
       </Container>

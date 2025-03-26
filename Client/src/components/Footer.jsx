@@ -1,5 +1,10 @@
-import CardComp from "./Card";
+/*Libraries & Frameworks*/
 import { Container } from "react-bootstrap";
+
+/*Components*/
+import FooterCard from "./FooterCard";
+
+
 
 const Footer = () => {
     const data = [
@@ -11,7 +16,7 @@ const Footer = () => {
   return (
     <Container className="d-flex flex-wrap gap-3">
       {data.map((item, index) => (
-            <CardComp 
+            <FooterCard 
               key={index} 
               title={item.title} 
               desc={item.desc} 
