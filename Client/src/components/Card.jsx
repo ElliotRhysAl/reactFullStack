@@ -1,13 +1,13 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const CardComp = ({title, text, url, img}) => {
+const CardComp = ({title, desc, url, img}) => {
     return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text>{text}</Card.Text>
+        <p>{desc}</p> {/*couldn't get it to render unsing Card.Text */}
         <Button href={url} target="_blank" variant="primary">
           Go!
         </Button>
