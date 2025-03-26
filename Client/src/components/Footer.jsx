@@ -16,14 +16,14 @@ const Footer = () => {
   return (
     <Container className="d-flex flex-wrap gap-3">
       {data.map((item, index) => (
-            <FooterCard 
-              key={index} 
-              title={item.title} 
-              desc={item.desc} 
-              url={item.url} 
-              img={item.img}
-            />
-          ))}
+        <FooterCard 
+          key={index} 
+          title={item.title} 
+          desc={item.desc} 
+          url={item.url} 
+          img={item.img}
+        />
+      ))}
     </Container>
   );
 };
