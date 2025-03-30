@@ -5,8 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 /*Pages & Components*/
-import Home from "./pages/Home";
-import About from "./pages/About";
+import HomePage from "./pages/Home";
+import AboutPage from "./pages/About";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navbar";
 
@@ -18,8 +18,8 @@ root.render(
             <Navigation />
             <div className="p-4">
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
             </Routes>
             </div>
             <Footer />

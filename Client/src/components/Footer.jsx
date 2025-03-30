@@ -1,9 +1,21 @@
 /*Libraries & Frameworks*/
-import { Container } from "react-bootstrap";
+import React from "react";
+import { Card, Button, Container } from "react-bootstrap";
 
-/*Components*/
-import FooterCard from "./FooterCard";
-
+const FooterCard = ({title, description, url, img}) => {
+  return (
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={img} />
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <p>{description}</p> {/*couldn't get it to render unsing Card.Text */}
+        <Button href={url} target="_blank" variant="primary">
+          Go!
+        </Button>
+      </Card.Body>
+    </Card>
+  );
+};
 
 
 const Footer = () => {
