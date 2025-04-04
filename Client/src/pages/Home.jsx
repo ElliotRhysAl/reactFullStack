@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form, FloatingLabel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -13,16 +13,16 @@ const HomePage = () => {
         <Row>
           <Col>
             <Form.Group controlId="name">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="John" />
-              <Form.Text className="text-muted">Please input your name</Form.Text>
+            <FloatingLabel controlId="floatingForename" label="First Name">
+              <Form.Control type="text" placeholder="First Name"/>
+            </FloatingLabel>
             </Form.Group>
           </Col>
           <Col>
             <Form.Group controlId="surname">
-              <Form.Label>Surname</Form.Label>
-              <Form.Control type="text" placeholder="Smith" />
-              <Form.Text className="text-muted">Please input your surname</Form.Text>
+            <FloatingLabel controlId="floatingSuranme" label="Last Name">
+              <Form.Control type="text" placeholder="Last Name"/>
+            </FloatingLabel>
             </Form.Group>
           </Col>
         </Row>
