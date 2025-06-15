@@ -50,8 +50,8 @@ const NavigationBar = () => {
                 <strong>Welcome, {user.email}!</strong>
               </div>
               <Nav className="flex-column">
-                <Nav.Link href="#profile">Profile</Nav.Link>
-                <Nav.Link href="#settings">Settings</Nav.Link>
+                <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
+                <Nav.Link as={Link} to="/settings">Settings</Nav.Link>
               </Nav>
               <Button
                 variant="outline-danger"

@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, FloatingLabel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
-const HomePage = () => {
+const SettingsPage = () => {
   return (
     <Container className="p-4">
       <h1 className="text-2xl font-bold">Welcome to Home Page</h1>
@@ -31,4 +31,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default SettingsPage;
