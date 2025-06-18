@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, Nav, NavDropdown, Container, Offcanvas, Button } from "react-bootstrap";
-import { useAuth, AuthProvider } from "./AuthContext.jsx";
+import { useAuth } from './AuthContext.jsx'
 import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
@@ -94,9 +94,7 @@ const NavigationBar = () => {
 
 // Wrap your app or router with AuthProvider at a higher level, e.g. in App.js
 export default function Navigation() {
-  return (
-    <AuthProvider>
+  return(
       <NavigationBar />
-    </AuthProvider>
   );
 }
