@@ -2,13 +2,14 @@
 import React from "react";
 import { Card, Button, Container } from "react-bootstrap";
 
-const FooterCard = ({title, description, url, img}) => {
+
+const FooterCard = ({title, desc, url, img}) => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "9rem" }}>
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <p>{description}</p> {/*couldn't get it to render unsing Card.Text */}
+          <Card.Text>{desc}</Card.Text>
         <Button href={url} target="_blank" variant="primary">
           Go!
         </Button>
@@ -20,11 +21,10 @@ const FooterCard = ({title, description, url, img}) => {
 
 const Footer = () => {
     const data = [
-      { title : "LinkedIn", desc : "Find me on LinkedIn", url : "https://www.linkedin.com/in/elliotrhysallen/", img : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" },
-      { title : "LinkedIn", desc : "Find me on LinkedIn", url : "https://www.linkedin.com/in/elliotrhysallen/", img : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" }
+      { title : "LinkedIn", desc : "Find me on LinkedIn!", url : "https://www.linkedin.com/in/elliotrhysallen/", img : "https://blog.waalaxy.com/wp-content/uploads/2021/01/6.png.webp" },
+      { title : "GitHub", desc : "Follow me on Github!", url : "https://github.com/ElliotRhysAl", img : "https://cdn3.iconfinder.com/data/icons/inficons/512/github.png" }
     ]
   
-
   return (
     <Container className="d-flex flex-wrap gap-3">
       {data.map((item, index) => (
@@ -39,5 +39,6 @@ const Footer = () => {
     </Container>
   );
 };
+
 
 export default Footer;
